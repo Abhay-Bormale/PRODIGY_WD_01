@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #b39f9f;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.glow-navbar {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d384d7;
+  padding: 20px 40px;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.6),
+              0 0 25px rgba(0, 255, 255, 0.4),
+              0 0 30px rgba(0, 128, 255, 0.3);
+  z-index: 100;
+
+  /* Neon animation */
+  animation: neon-glow 4s linear infinite alternate;
+}
+
+.glow-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow-navbar ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.glow-navbar ul li a {
+  color: #e9e2e2;
+  text-border: 2px solid transparent;
+  text-shadow: 0 0 5px rgba(68, 48, 48, 0.5),
+               0 0 10px rgba(117, 121, 63, 0.5),
+               0 0 15px rgba(110, 62, 30, 0.5);
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+.glow-navbar ul li a:hover {
+  color: #0ff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown styles */
+.dropdown-content {
+  display: flex;
+  flex-direction: column; /* force vertical layout */
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #222;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+  z-index: 1;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+/* Show only on hover */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: #333;
+  color: #0ff;
+}
+
+/* Neon animation */
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 10px #ff0080, 0 0 20px #00ffff, 0 0 30px #0080ff;
+  }
+  100% {
+    box-shadow: 0 0 20px #00ffff, 0 0 30px #ff00ff, 0 0 40px #ff8000;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('../assets/img/websitebackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+body {
+  padding-top: 60px; /* same height as navbar */
+}
+
+.info-section {
+  background-color: rgba(255, 255, 255, 0.6); /* white with 60% opacity */
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 80px auto 40px;
+  font-size: 32px;
+  color: #116759;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px); /* adds nice blur behind transparent background */
+}
+
+
+
+
