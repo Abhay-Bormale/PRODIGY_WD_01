@@ -1,5 +1,5 @@
-// script.js
-window.addEventListener('scroll', () => {
+// Scroll detection for navbar background change
+window.addEventListener('scroll', function () {
   const navbar = document.getElementById('navbar');
   if (window.scrollY > 50) {
     navbar.classList.add('scrolled');
